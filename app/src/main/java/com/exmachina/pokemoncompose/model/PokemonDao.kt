@@ -13,8 +13,8 @@ interface  PokemonDao {
     @Query("SELECT * FROM pokemons")
     fun findAll() : List<PokemonEntity>
 
-    @Query("SELECT * FROM pokemons WHERE id = :idVal" )
-    fun findPokemon(idVal: Long) : PokemonEntity
+    @Query("SELECT * FROM pokemons WHERE name = :nameVal" )
+    fun findPokemon(nameVal: String) : PokemonEntity
 
     @Insert
     fun create(pokemon: PokemonEntity)
