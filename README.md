@@ -1,5 +1,5 @@
 # PokemonCompose
-Projeto baseado na trilha de Android da Ocean com Professores Paulo Salvatore e Sylker Teles
+Projeto baseado na trilha de Android da Ocean com Professores Paulo Salvatore e Antonio de Carvalho
 
 Este é o meu primeiro projeto publico.<br>
 Criei este projeto como aprendizado das aulas de Retrofit, Room, Jetpack Compose e Arquitetura. <br>
