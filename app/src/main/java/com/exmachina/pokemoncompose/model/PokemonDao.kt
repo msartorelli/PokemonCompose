@@ -1,22 +1,22 @@
-package com.exmachina.roomocean.model
+package com.exmachina.pokemoncompose.model
 
-import androidx.compose.runtime.snapshots.SnapshotStateList
-import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import com.exmachina.pokemoncompose.model.PokemonEntity
-import java.util.*
+import androidx.room.*
 
 @Dao
 interface  PokemonDao {
     @Query("SELECT * FROM pokemons")
-    fun findAll() : List<PokemonEntity>
+    suspend fun findAll() : List<PokemonEntity>
 
     @Query("SELECT * FROM pokemons WHERE name = :nameVal" )
-    fun findPokemon(nameVal: String) : PokemonEntity
+    suspend fun findPokemon(nameVal: String) : PokemonEntity?
 
     @Insert
-    fun create(pokemon: PokemonEntity)
+    suspend fun create(pokemon: PokemonEntity)
+
+    @Delete
+    suspend fun delete(pokemon: PokemonEntity)
+
+    @Update
+    suspend fun update(pokemon: PokemonEntity)
 
 }

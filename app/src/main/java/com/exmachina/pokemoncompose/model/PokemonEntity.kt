@@ -2,12 +2,12 @@ package com.exmachina.pokemoncompose.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
 
 @Entity(tableName = "pokemons")
-data class PokemonEntity (
-    @PrimaryKey
-    val name : String,
+data class PokemonEntity(
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0,
+    val name: String,
     val url: String
 )
 
